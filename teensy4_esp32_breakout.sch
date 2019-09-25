@@ -304,17 +304,6 @@ F 3 "~" H 3700 4900 50  0001 C CNN
 	1    3700 4900
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_02x05_Odd_Even J2
-U 1 1 5D8EE5FE
-P 7650 3350
-F 0 "J2" H 7700 3767 50  0000 C CNN
-F 1 "Conn_02x05_Odd_Even" H 7700 3676 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 7650 3350 50  0001 C CNN
-F 3 "~" H 7650 3350 50  0001 C CNN
-	1    7650 3350
-	1    0    0    -1  
-$EndComp
 NoConn ~ 3350 3850
 $Comp
 L power:+3V3 #PWR0112
@@ -338,18 +327,6 @@ F 3 "" H 7450 3150 50  0001 C CNN
 	1    7450 3150
 	0    1    1    0   
 $EndComp
-$Comp
-L power:PWR_FLAG #FLG0101
-U 1 1 5D8F83F8
-P 4750 3650
-F 0 "#FLG0101" H 4750 3725 50  0001 C CNN
-F 1 "PWR_FLAG" H 4750 3823 50  0000 C CNN
-F 2 "" H 4750 3650 50  0001 C CNN
-F 3 "~" H 4750 3650 50  0001 C CNN
-	1    4750 3650
-	-1   0    0    1   
-$EndComp
-Connection ~ 4750 3650
 $Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 5D8F97B5
@@ -418,8 +395,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/tlv755p.pdf" H 8950 3750 50  0001 C CNN
 	1    8950 3750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7950 3250 8300 3250
 Wire Wire Line
 	8300 3250 8300 3650
 Wire Wire Line
@@ -537,14 +512,10 @@ Text Label 7950 3350 0    50   ~ 0
 IO25
 Text Label 7950 3450 0    50   ~ 0
 IO26
-Text Label 7950 3550 0    50   ~ 0
-IO27
 Text Label 6250 4300 0    50   ~ 0
 IO25
 Text Label 6250 4400 0    50   ~ 0
 IO26
-Text Label 6250 4500 0    50   ~ 0
-IO27
 NoConn ~ 6250 3000
 NoConn ~ 6250 3200
 NoConn ~ 6250 3300
@@ -553,10 +524,34 @@ NoConn ~ 6250 3600
 NoConn ~ 6250 3700
 NoConn ~ 6250 3900
 NoConn ~ 6250 4000
-NoConn ~ 6250 4600
-NoConn ~ 6250 4700
 NoConn ~ 6250 4800
 NoConn ~ 6250 4900
 NoConn ~ 3950 1500
 NoConn ~ 3050 2850
+Text Label 6250 4600 0    50   ~ 0
+ESP_BUSY
+Text Label 6250 4500 0    50   ~ 0
+IO27
+Text Label 7950 3550 0    50   ~ 0
+IO27
+Text Label 7450 3650 2    50   ~ 0
+ESP_BUSY
+$Comp
+L Connector_Generic:Conn_02x06_Odd_Even J2
+U 1 1 5D8DD515
+P 7650 3350
+F 0 "J2" H 7700 3767 50  0000 C CNN
+F 1 "Conn_02x06_Odd_Even" H 7700 3676 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical" H 7650 3350 50  0001 C CNN
+F 3 "~" H 7650 3350 50  0001 C CNN
+	1    7650 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 3250 8300 3250
+NoConn ~ 4450 3050
+Text Label 7950 3650 0    50   ~ 0
+IO33
+Text Label 6250 4700 0    50   ~ 0
+IO33
 $EndSCHEMATC

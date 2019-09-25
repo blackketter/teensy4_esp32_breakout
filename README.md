@@ -38,6 +38,7 @@ Column 2:
 3. ESP32 IO29/CS
 4. ESP32 IO14/MOSI
 5. ESP32 IO23/MISO
+6. ESP32 IO32/ESP_BUSY
 
 Column 3:
 
@@ -46,3 +47,4 @@ Column 3:
 3. ESP32 IO25, Green LED out
 4. ESP32 IO26, Red LED out
 5. ESP32 IO27, Blue LED out
+6. ESP32 IO33
