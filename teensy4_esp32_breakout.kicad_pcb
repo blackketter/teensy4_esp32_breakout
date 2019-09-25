@@ -237,7 +237,8 @@
     (fp_line (start 9.12 -15.865) (end 9.12 -9.445) (layer F.SilkS) (width 0.12))
     (fp_line (start -9.12 -15.865) (end -9.12 -9.445) (layer F.SilkS) (width 0.12))
     (fp_line (start -9.12 -9.445) (end -9.5 -9.445) (layer F.SilkS) (width 0.12))
-    (pad 39 smd rect (at -1 -0.755 270) (size 5 5) (layers F.Cu F.Paste F.Mask))
+    (pad 39 smd rect (at -1 -0.755 270) (size 5 5) (layers F.Cu F.Paste F.Mask)
+      (net 1 GND))
     (pad 1 smd rect (at -8.5 -8.255 270) (size 2 0.9) (layers F.Cu F.Paste F.Mask)
       (net 1 GND))
     (pad 2 smd rect (at -8.5 -6.985 270) (size 2 0.9) (layers F.Cu F.Paste F.Mask)
@@ -940,7 +941,7 @@
   (gr_line (start 181.61 100.33) (end 181.61 123.19) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 151.13 100.33) (end 181.61 100.33) (layer Edge.Cuts) (width 0.05))
 
-  (via (at 173.228 112.014) (size 4.318) (drill 3.81) (layers F.Cu B.Cu) (net 0) (status 30))
+  (via (at 173.228 112.014) (size 4.318) (drill 3.81) (layers F.Cu B.Cu) (net 1) (status 30))
   (segment (start 154.94 101.6) (end 155.067 101.6) (width 0.4572) (layer B.Cu) (net 1) (status 30))
   (segment (start 156.337 102.997) (end 154.94 101.6) (width 0.4572) (layer B.Cu) (net 1) (status 20))
   (segment (start 154.94 101.6) (end 154.94 101.727) (width 0.4572) (layer B.Cu) (net 1) (status 30))
