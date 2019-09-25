@@ -15,7 +15,7 @@ Designed in KiCad.
 
 Notes:
 
-- In progress: First Draft
+- In progress: Ordered first board
 - With longer header pins you should be able to flip the board to be under or over the Teensy 4.0
 
 Pinout:
@@ -42,8 +42,8 @@ Column 2:
 
 Column 3:
 
-1. 3.3v Regulated
-2. 5v Input
+1. 3.3v Regulated Output (if using onboard regulator)
+2. 5v Input To Regulator
 3. ESP32 IO25, Green LED out
 4. ESP32 IO26, Red LED out
 5. ESP32 IO27, Blue LED out
