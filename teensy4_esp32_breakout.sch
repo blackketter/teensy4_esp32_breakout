@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:teensy4_esp32_breakout-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -411,7 +412,7 @@ L Regulator_Linear:TLV75533PDBV U2
 U 1 1 5D906AE6
 P 8950 3750
 F 0 "U2" H 8950 4092 50  0000 C CNN
-F 1 "TLV75533PDBV" H 8950 4001 50  0000 C CNN
+F 1 "TLV75733PDBVR" H 8950 4001 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 8950 4050 50  0001 C CIN
 F 3 "http://www.ti.com/lit/ds/symlink/tlv755p.pdf" H 8950 3750 50  0001 C CNN
 	1    8950 3750
