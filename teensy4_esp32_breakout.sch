@@ -14,33 +14,18 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Connector_Generic:Conn_01x08 J1
-U 1 1 5D8AAC3C
-P 3150 3550
-F 0 "J1" H 3068 4067 50  0000 C CNN
-F 1 "Conn_01x08" H 3068 3976 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 3150 3550 50  0001 C CNN
-F 3 "~" H 3150 3550 50  0001 C CNN
-	1    3150 3550
-	-1   0    0    -1  
-$EndComp
 Text Label 3350 3250 0    50   ~ 0
 25_RX6
 Text Label 3350 3350 0    50   ~ 0
-26
+26_IO0
 Text Label 3350 3450 0    50   ~ 0
-28
+28_EN
 Text Label 3350 3550 0    50   ~ 0
 24_TX6
 Text Label 3350 3650 0    50   ~ 0
 3V3_Teensy
 Text Label 3350 3750 0    50   ~ 0
 GND
-Text Label 3350 3850 0    50   ~ 0
-PROGRAM
-Text Label 3350 3950 0    50   ~ 0
-ON_OFF
 $Comp
 L RF_Module:ESP32-WROOM-32D U1
 U 1 1 5D8AC474
@@ -89,11 +74,7 @@ Text Label 6850 2700 2    50   ~ 0
 Wire Wire Line
 	6250 2600 6850 2600
 Text Label 6850 2600 2    50   ~ 0
-26
-Wire Wire Line
-	6250 2800 6850 2800
-Text Label 6850 2800 2    50   ~ 0
-28
+26_IO0
 Text Label 4650 2600 0    50   ~ 0
 ESP32_EN
 Wire Wire Line
@@ -147,31 +128,27 @@ $EndComp
 $Comp
 L Switch:SW_SPST SW1
 U 1 1 5D8B67A3
-P 3600 4250
-F 0 "SW1" H 3600 4485 50  0000 C CNN
-F 1 "ON_OFF" H 3600 4394 50  0000 C CNN
-F 2 "Button_Switch_SMD:Panasonic_EVQPUJ_EVQPUA" H 3600 4250 50  0001 C CNN
-F 3 "~" H 3600 4250 50  0001 C CNN
-	1    3600 4250
+P 3250 2600
+F 0 "SW1" H 3250 2835 50  0000 C CNN
+F 1 "RESET" H 3250 2744 50  0000 C CNN
+F 2 "Button_Switch_SMD:Panasonic_EVQPUJ_EVQPUA" H 3250 2600 50  0001 C CNN
+F 3 "~" H 3250 2600 50  0001 C CNN
+	1    3250 2600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3400 4250 3350 4250
-Wire Wire Line
-	3350 3950 3350 4250
 $Comp
 L power:GND #PWR0104
 U 1 1 5D8B7A2A
-P 3850 4250
-F 0 "#PWR0104" H 3850 4000 50  0001 C CNN
-F 1 "GND" H 3855 4077 50  0000 C CNN
-F 2 "" H 3850 4250 50  0001 C CNN
-F 3 "" H 3850 4250 50  0001 C CNN
-	1    3850 4250
+P 3500 2600
+F 0 "#PWR0104" H 3500 2350 50  0001 C CNN
+F 1 "GND" H 3505 2427 50  0000 C CNN
+F 2 "" H 3500 2600 50  0001 C CNN
+F 3 "" H 3500 2600 50  0001 C CNN
+	1    3500 2600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3800 4250 3850 4250
+	3450 2600 3500 2600
 NoConn ~ 5050 2800
 NoConn ~ 5050 2900
 $Comp
@@ -304,7 +281,6 @@ F 3 "~" H 3700 4900 50  0001 C CNN
 	1    3700 4900
 	1    0    0    -1  
 $EndComp
-NoConn ~ 3350 3850
 $Comp
 L power:+3V3 #PWR0112
 U 1 1 5D8F671A
@@ -330,17 +306,17 @@ $EndComp
 $Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 5D8F97B5
-P 3850 4250
-F 0 "#FLG0102" H 3850 4325 50  0001 C CNN
-F 1 "PWR_FLAG" H 4100 4350 50  0000 C CNN
-F 2 "" H 3850 4250 50  0001 C CNN
-F 3 "~" H 3850 4250 50  0001 C CNN
-	1    3850 4250
+P 3500 2600
+F 0 "#FLG0102" H 3500 2675 50  0001 C CNN
+F 1 "PWR_FLAG" H 3750 2700 50  0000 C CNN
+F 2 "" H 3500 2600 50  0001 C CNN
+F 3 "~" H 3500 2600 50  0001 C CNN
+	1    3500 2600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	3350 3750 3850 3750
-Connection ~ 3850 4250
+Connection ~ 3500 2600
 $Comp
 L Device:LED D1
 U 1 1 5D9004C1
@@ -380,10 +356,6 @@ Text Label 7350 5050 0    50   ~ 0
 IO22
 Text Label 6250 3100 0    50   ~ 0
 CS
-Text Label 4050 2600 0    50   ~ 0
-ON_OFF
-Wire Wire Line
-	4050 2600 4550 2600
 $Comp
 L Regulator_Linear:TLV75533PDBV U2
 U 1 1 5D906AE6
@@ -527,7 +499,6 @@ NoConn ~ 6250 4000
 NoConn ~ 6250 4800
 NoConn ~ 6250 4900
 NoConn ~ 3950 1500
-NoConn ~ 3050 2850
 Text Label 6250 4600 0    50   ~ 0
 ESP_BUSY
 Text Label 6250 4500 0    50   ~ 0
@@ -549,9 +520,39 @@ F 3 "~" H 7650 3350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7950 3250 8300 3250
-NoConn ~ 4450 3050
 Text Label 7950 3650 0    50   ~ 0
 IO33
 Text Label 6250 4700 0    50   ~ 0
 IO33
+NoConn ~ 6250 2800
+Text Label 4050 2600 0    50   ~ 0
+28_EN
+$Comp
+L power:GND #PWR0119
+U 1 1 5D9B9624
+P 4950 5000
+F 0 "#PWR0119" H 4950 4750 50  0001 C CNN
+F 1 "GND" H 4955 4827 50  0000 C CNN
+F 2 "" H 4950 5000 50  0001 C CNN
+F 3 "" H 4950 5000 50  0001 C CNN
+	1    4950 5000
+	1    0    0    -1  
+$EndComp
+Text Label 2850 2600 0    50   ~ 0
+28_EN
+Wire Wire Line
+	4050 2600 4550 2600
+Wire Wire Line
+	3050 2600 2850 2600
+$Comp
+L Connector_Generic:Conn_01x06 J1
+U 1 1 5DA1A5D0
+P 3150 3450
+F 0 "J1" H 3068 3867 50  0000 C CNN
+F 1 "Conn_01x06" H 3068 3776 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 3150 3450 50  0001 C CNN
+F 3 "~" H 3150 3450 50  0001 C CNN
+	1    3150 3450
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
