@@ -9,7 +9,8 @@ There's an LED on ESP32 pin IO22.
 Designed in KiCad.
 
 ![breakout render](render.png)
-![breakout render](render_back.png)
+![breakout render back](render_back.png)
+![schematic](schematic.png)
 
 Notes:
 
